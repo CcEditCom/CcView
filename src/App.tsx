@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <Head />
-      <div className="App">test</div>
+      <div className="bg-amber-50 text-2xl">test</div>
       <div>test2</div>
     </>
   );
