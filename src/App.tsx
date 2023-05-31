@@ -1,12 +1,16 @@
 import React from 'react';
-
+import Head from './components/head'
 function App() {
   return (
-    <div className="App">
-      <p>
-        Edit <code>src/A pp.tsx</code> and sa ve to reload.
-      </p>
-    </div>
+      <>
+          <Head />
+          <div className="App">
+              test
+          </div>
+          <div>
+              test2
+          </div>
+      </>
   );
 }
 
