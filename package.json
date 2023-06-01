@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -24,6 +23,7 @@
   },
   "devDependencies": {
     "eslint-config-next": "13.4.4",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2"
   }
 }
