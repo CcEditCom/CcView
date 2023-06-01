@@ -1,5 +1,5 @@
 import { NextApiResponse, NextApiRequest } from 'next';
-import { people } from '@/data/people';
+import { people } from "@/data/people";
 import { Person } from '@/types/interfaces';
 
 export default function handler(
