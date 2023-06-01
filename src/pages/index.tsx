@@ -1,6 +1,9 @@
-import Link from 'next/link';
+import type { ReactElement } from 'react';
+import Layout from '../components/layout';
 import { useRouter } from 'next/router';
-function Home() {
+import Link from 'next/link';
+
+export default function Home() {
     const router = useRouter();
 
     return (
@@ -34,4 +37,10 @@ function Home() {
     );
 }
 
-export default Home;
+Home.getLayout = (page: ReactElement) => {
+    return (
+        <Layout>
+           {page}
+        </Layout>
+    );
+};
