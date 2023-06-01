@@ -1,5 +1,5 @@
 function AboutPage() {
-    return <div>Welcome to AboutPage</div>
+    return <div>Welcome to AboutPage</div>;
 }
 
-export default AboutPage
+export default AboutPage;
