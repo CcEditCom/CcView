@@ -1,6 +1,5 @@
-import type { ReactElement } from 'react';
-import Layout from '../components/layout';
-import { useRouter } from 'next/router';
+'use client';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import ccLogo from '@/assets/ccLogo.png';
@@ -47,7 +46,3 @@ export default function IndexPage() {
         </>
     );
 }
-
-IndexPage.getLayout = (page: ReactElement) => {
-    return page;
-};
