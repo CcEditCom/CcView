@@ -20,9 +20,16 @@ function Home() {
                     <span>Also goes to login</span>
                 </Link>
             </li>
-            <button onClick={() => router.push('/about')}>
-                Click here goes to about
-            </button>
+            <li>
+                <button onClick={() => router.push('/about')}>
+                    Click here goes to about
+                </button>
+            </li>
+            <li>
+                <button onClick={() => router.push('/api/user')}>
+                    get user json
+                </button>
+            </li>
         </ul>
     );
 }
