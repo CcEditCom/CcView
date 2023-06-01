@@ -1,5 +1,9 @@
 export default function Layout({ children }: {
     children: React.ReactNode;
 }) {
-    return children;
+    return (
+        <div className='bg-amber-50 flex'>
+            {children}
+        </div>
+    );
 }
