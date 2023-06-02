@@ -16,6 +16,11 @@ export default function Home() {
       />
       <ul>
         <li>
+          <Link href='/redux'>
+            <span>Go to redux/ </span>
+          </Link>
+        </li>
+        <li>
           <Link href='/design/11111'>
             <span>Go to pages/ design/11111</span>
           </Link>
