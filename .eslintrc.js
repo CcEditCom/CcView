@@ -1,9 +1,10 @@
+// eslint-disabled
 const ISPROD = process.env.NODE_ENV === 'production';
 module.exports = {
   root: true,
   extends: [
-    "eslint:recommended",
-    "next/core-web-vitals",
+    'eslint:recommended',
+    'next/core-web-vitals'
   ],
   env: {
     browser: true,
@@ -11,7 +12,7 @@ module.exports = {
     es6: true
   },
   globals: {
-    'React': true
+    React: true
   },
   ignorePatterns: [],
   rules: {
@@ -47,18 +48,18 @@ module.exports = {
     'accessor-pairs': 'error', // 提供setter的同时要提供getter，提供getter的同时可以不提供setter
     'arrow-body-style': 'off', // 箭头函数体在多行场景下使用大括号，单行情况下不允许使用大括号(关闭，单行内常出现类型说明)
     'block-scoped-var': 'error', // 不允许在块级作用域中使用var
-    'camelcase': 'error', // 命名变量时可以使用驼峰或者下划线
+    camelcase: 'error', // 命名变量时可以使用驼峰或者下划线
     'capitalized-comments': 'off', // 禁止注释的首字母大写
     'class-methods-use-this': ISPROD ? 'error' : 'off', // 强制类方法使用this,如果一个类方法不使用this，有时可以做成静态函数。 发布前校验
-    'complexity': ['error', 100], // 最大if else层数 上限10
+    complexity: ['error', 100], // 最大if else层数 上限10
     'consistent-return': 'error', // 要求使用一致的 return 语句
     'consistent-this': ['error', 'that'], // that 只能用来承接this
-    'curly': ['off', 'all'], // if, else 必须写大括号
+    curly: ['off', 'all'], // if, else 必须写大括号
     'default-case': 'error', // Switch 语句中必须有 Default 分支
     'default-case-last': 'error', // Switch 语句中的 Default 必须位于最后
     'default-param-last': 'off', // 函数中存在默认值的参数必须在最后，更规范的函数写法
     'dot-notation': 'error', // 能用.连接符取值时，优先使用.
-    'eqeqeq': ['error', 'always'], // 强制使用 === 和 !==
+    eqeqeq: ['error', 'always'], // 强制使用 === 和 !==
     'func-name-matching': 'off', // 不强制要求接收函数的变量与函数同名
     'func-names': ['error', 'never'], // 省略多余的函数命名
     'func-style': ['off'], // 对函数定义的方式不做要求
@@ -162,14 +163,14 @@ module.exports = {
     'prefer-spread': 'error', // 建议使用扩展语法而非.apply()
     'prefer-template': 'error', // 建议使用模板字面量而非字符串连接
     'quote-props': ['error', 'as-needed'], // 属性前后按需添加双引号
-    'radix': ['error', 'as-needed'], // parseInt转换非10进制时，不省略第二个参数基数
+    radix: ['error', 'as-needed'], // parseInt转换非10进制时，不省略第二个参数基数
     'require-await': 'off', // async 内部必须存在 await
     'spaced-comment': ['error', 'always', { // 要求或禁止在注释前有空白
       markers: ['global', 'globals', 'eslint', 'eslint-disable', '*package', '!', ','] // 'markers'的值是一个字符串形式的数组，这些字符串也就是块级注释的标记
     }],
-    'strict': ['error', 'global'], // 只允许全局声明 use strict
+    strict: ['error', 'global'], // 只允许全局声明 use strict
     'vars-on-top': 'error', // var变量声明要位于顶部，手动进行变量提升
-    'yoda': 'error', // 不允许yoda表达式，判断条件中变量在前，值在后
+    yoda: 'error', // 不允许yoda表达式，判断条件中变量在前，值在后
     'array-bracket-newline': 'off', // 在数组开括号后和闭括号前强制换行
     'array-bracket-spacing': 'error', // 禁止在括号内使用空格，1.有空格var arr = [ 'foo', 'bar' ]; 2.无空格 var arr = ['foo', 'bar', 'baz'];
     'array-element-newline': 'off', // 数组元素换行风格
@@ -195,7 +196,7 @@ module.exports = {
     'function-call-argument-newline': 'off', // 不强制要求函数调用参数换行
     'generator-star-spacing': ['error', { before: true, after: false }], // 强制 generator 函数中 * 号前面有空格
     'implicit-arrow-linebreak': 'error', // 强制隐式返回的箭头函数体的位置需在同一行
-    'indent': ['off', 2],
+    indent: ['off', 2],
     'jsx-quotes': ['error', 'prefer-single'], // JSX 属性中使用一致的单引号
     'key-spacing': ['error', { // 对象文字属性中的键和值之间保持一致的间距
       beforeColon: false,
@@ -235,12 +236,12 @@ module.exports = {
     'object-property-newline': 'off', // 对象属性强制换行
     'operator-linebreak': ['error', 'before'], // 运算符强制执行一致的换行样式, 在操作符之前放置换行符
     'padded-blocks': ['error', 'never'], // 禁止块语句和类的开始或末尾有空行
-    'quotes': ['error', 'single', { // 强制一致地使用反引号、双引号或单引号
+    quotes: ['error', 'single', { // 强制一致地使用反引号、双引号或单引号
       avoidEscape: true, // 允许字符串使用单引号或双引号，只要字符串中包含了一个其它引号，否则需要转义
       allowTemplateLiterals: true //  允许字符串使用反勾号
     }],
     'rest-spread-spacing': ['error', 'never'], // 展开运算符后面不允许跟空格： ... args
-    'semi': ['error', 'always'], // 分号检查
+    semi: ['error', 'always'], // 分号检查
     // 'semi': 'off', // 不检查分号
     'semi-spacing': 'error', // 强制分号后有空格
     'semi-style': ['error', 'last'], // 强制分号的位置在末尾
@@ -256,6 +257,6 @@ module.exports = {
     'template-curly-spacing': ['error', 'never'], // 强制模板字符串中禁止花括号内出现空格 ${people.name}
     'wrap-iife': ['error', 'any'], // 需要把立即执行的函数包裹起来，不限制执行风格
     'yield-star-spacing': ['error', 'before'], //* 在 yield 表达式周围强制使用间距
-    'no-debugger': ISPROD ? 'error' : 'off', // 禁用 debugger
+    'no-debugger': ISPROD ? 'error' : 'off' // 禁用 debugger
   }
-}
+};
