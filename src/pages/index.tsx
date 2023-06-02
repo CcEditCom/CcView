@@ -1,58 +1,48 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
+'use client';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import Image from 'next/image';
+import ccLogo from '@/assets/ccLogo.png';
 
-import Counter from '@/store/features/counter/Counter';
+export default function IndexPage() {
+  const router = useRouter();
 
-const IndexPage: NextPage = () => {
   return (
-    <div>
-      <Head>
-        <title>Redux Toolkit</title>
-        <link rel='icon' href=' /favicon.ico' />
-      </Head>
-      <header>
-        <img src='/logo.svg' alt='logo' />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            href='https://reactjs.org/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            href='https://redux.js.org/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            href='https://redux-toolkit.js.org/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            href='https://react-redux.js.org/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <>
+      <Image
+        src={ccLogo}
+        alt='Picture of the author'
+        width={500}
+        height={500}
+        priority
+      />
+      <ul>
+        <li>
+          <Link href='/design/11111'>
+            <span>Go to pages/ design/11111</span>
+          </Link>
+        </li>
+        <li>
+          <Link href='/about'>
+            <span>Also goes to about</span>
+          </Link>
+        </li>
+        <li>
+          <Link href='/login'>
+            <span>Also goes to login</span>
+          </Link>
+        </li>
+        <li>
+          <button onClick={() => router.push('/about')}>
+            Click here goes to about
+          </button>
+        </li>
+        <li>
+          <button onClick={() => router.push('/api/user')}>
+            get user json
+          </button>
+        </li>
+      </ul>
+    </>
   );
-};
-
-export default IndexPage;
+}
