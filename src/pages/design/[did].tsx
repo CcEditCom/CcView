@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-function DesignPage() {
+export default function DesignPage() {
     const router = useRouter();
     const { did } = router.query;
 
@@ -12,5 +12,3 @@ function DesignPage() {
 
     return <div>Welcome to DesignPage： {did}!</div>;
 }
-
-export default DesignPage;

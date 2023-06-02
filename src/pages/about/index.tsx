@@ -1,5 +1,10 @@
-function AboutPage() {
-    return <div>Welcome to AboutPage</div>;
+export async function getServerSideProps() {
+    await new Promise(resolve => {
+        setTimeout(resolve, 500);
+    });
+    return { props: {}};
 }
 
-export default AboutPage;
+export default function AboutPage() {
+    return <p>This is about Next.js!</p>;
+}

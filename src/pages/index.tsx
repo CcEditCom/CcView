@@ -1,10 +1,14 @@
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import ccLogo from '@/assets/ccLogo.png';
 
-export default function Home() {
-  const router = useRouter();
+export async function getServerSideProps() {
+  await new Promise(resolve => {
+    setTimeout(resolve, 5000);
+  });
+  return { props: {}};
+}
+
+export default function IndexPage() {
   return (
     <>
       <Image
@@ -14,38 +18,6 @@ export default function Home() {
         height={500}
         priority
       />
-      <ul>
-        <li>
-          <Link href='/redux'>
-            <span>Go to redux/ </span>
-          </Link>
-        </li>
-        <li>
-          <Link href='/design/11111'>
-            <span>Go to pages/ design/11111</span>
-          </Link>
-        </li>
-        <li>
-          <Link href='/about'>
-            <span>Also goes to about</span>
-          </Link>
-        </li>
-        <li>
-          <Link href='/login'>
-            <span>Also goes to login</span>
-          </Link>
-        </li>
-        <li>
-          <button onClick={() => router.push('/about')}>
-            Click here goes to about
-          </button>
-        </li>
-        <li>
-          <button onClick={() => router.push('/api/user')}>
-            get user json
-          </button>
-        </li>
-      </ul>
     </>
   );
 }

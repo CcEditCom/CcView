@@ -1,5 +1,10 @@
-function LoginPage() {
-    return <div>Welcome to LoginPage!</div>;
+export async function getServerSideProps() {
+    await new Promise(resolve => {
+        setTimeout(resolve, 3000);
+    });
+    return { props: {}};
 }
 
-export default LoginPage;
+export default function LoginPage() {
+    return <div>Welcome to LoginPage!</div>;
+}
