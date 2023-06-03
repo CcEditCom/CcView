@@ -32,40 +32,43 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       router.events.off('routeChangeError', handleStop);
     };
   }, [router]);
-  
+
   return (
     <>
       <Head>
         <title>Cc-View</title>
-        <link rel='icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon.ico'/>
       </Head>
       <style jsx>{`
-          a {
-            margin: 0 10px 0 0;
-          }
-    ` }</style>
+        a {
+          margin: 0 10px 0 0;
+        }
+      `}</style>
       <div className='flex flex-row justify-around justify-center'>
-          <Link className='inline-block' href='/'>
-            <span> / </span>
-          </Link>
-          <Link className='inline-block' href='/redux'>
-            <span>/redux </span>
-          </Link>
-          <Link className='inline-block' href='/design/11111'>
-            <span>/design/11111</span>
-          </Link>
-          <Link className='inline-block' href='/about'>
-            <span>/about</span>
-          </Link>
-          <Link className='inline-block' href='/login'>
-            <span>/login</span>
-          </Link>
-          <button className='inline-block' onClick={() => router.push('/about')}>
-            /about
-          </button>
-          <button className='inline-block' onClick={() => router.push('/api/user')}>
-            get user json
-          </button>
+        <Link className='inline-block' href='/'>
+          <span> / </span>
+        </Link>
+        <Link className='inline-block' href='/form'>
+          <span>/form </span>
+        </Link>
+        <Link className='inline-block' href='/redux'>
+          <span>/redux </span>
+        </Link>
+        <Link className='inline-block' href='/design/11111'>
+          <span>/design/11111</span>
+        </Link>
+        <Link className='inline-block' href='/about'>
+          <span>/about</span>
+        </Link>
+        <Link className='inline-block' href='/login'>
+          <span>/login</span>
+        </Link>
+        <button className='inline-block' onClick={() => router.push('/about')}>
+          /about
+        </button>
+        <button className='inline-block' onClick={() => router.push('/api/user')}>
+          get user json
+        </button>
       </div>
       <Provider store={store}>
         <Component {...pageProps} />
