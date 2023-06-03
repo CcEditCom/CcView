@@ -49,16 +49,19 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <span> / </span>
         </Link>
         <Link className='inline-block' href='/cookie'>
-          <span>/cookie </span>
+          <span>cookie读写  </span>
+        </Link>
+        <Link className='inline-block' href='/components'>
+          <span>components组件引入 </span>
         </Link>
         <Link className='inline-block' href='/form'>
-          <span>/form </span>
+          <span>form表单 </span>
         </Link>
         <Link className='inline-block' href='/redux'>
-          <span>/redux </span>
+          <span>redux实例 </span>
         </Link>
         <Link className='inline-block' href='/design/11111'>
-          <span>/design/11111</span>
+          <span>design带参数</span>
         </Link>
         <Link className='inline-block' href='/about'>
           <span>/about</span>
@@ -70,7 +73,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           /about
         </button>
         <button className='inline-block' onClick={() => router.push('/api/user')}>
-          get user json
+          get json api
         </button>
       </div>
       <Provider store={store}>
