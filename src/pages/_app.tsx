@@ -49,7 +49,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <span> / </span>
         </Link>
         <Link className='inline-block' href='/image'>
-          <span> /image </span>
+          <span> /image组件 </span>
+        </Link>
+        <Link className='inline-block' href='/svg'>
+          <span> /svg组件 </span>
         </Link>
         <Link className='inline-block' href='/cookie'>
           <span>cookie读写  </span>
