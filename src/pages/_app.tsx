@@ -48,6 +48,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Link className='inline-block' href='/'>
           <span> / </span>
         </Link>
+        <Link className='inline-block' href='/image'>
+          <span> /image </span>
+        </Link>
         <Link className='inline-block' href='/cookie'>
           <span>cookie读写  </span>
         </Link>
