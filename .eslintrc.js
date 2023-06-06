@@ -14,7 +14,10 @@ module.exports = {
   globals: {
     React: true
   },
-  ignorePatterns: [],
+  ignorePatterns: [
+    '/tailwind.config.js',
+    '/postcss.config.js'
+  ],
   rules: {
     'linebreak-style': ['error', 'unix'], // 缩进风格
     'no-constant-condition': 'error', // 允许条件中的常量表达式。 if(true) 无意义
